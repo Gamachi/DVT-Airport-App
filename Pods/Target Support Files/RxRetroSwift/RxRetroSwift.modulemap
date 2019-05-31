@@ -1,0 +1,6 @@
+framework module RxRetroSwift {
+  umbrella header "RxRetroSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

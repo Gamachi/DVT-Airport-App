@@ -15,6 +15,7 @@
 		06E33819229C04F00048FD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E33817229C04F00048FD09 /* Main.storyboard */; };
 		06E3381B229C04F10048FD09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E3381A229C04F10048FD09 /* Assets.xcassets */; };
 		06E3381E229C04F10048FD09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E3381C229C04F10048FD09 /* LaunchScreen.storyboard */; };
+		D2D5454EBC978571456ADB1C /* Pods_DVT_Airport_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF190D3340DE133FFC0E526D /* Pods_DVT_Airport_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		06E3381A229C04F10048FD09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06E3381D229C04F10048FD09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06E3381F229C04F10048FD09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26675DC07F41A9CB1EAC47A1 /* Pods-DVT Airport App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVT Airport App.release.xcconfig"; path = "Target Support Files/Pods-DVT Airport App/Pods-DVT Airport App.release.xcconfig"; sourceTree = "<group>"; };
+		4514CDFE32F230431F71A6E3 /* Pods-DVT Airport App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVT Airport App.debug.xcconfig"; path = "Target Support Files/Pods-DVT Airport App/Pods-DVT Airport App.debug.xcconfig"; sourceTree = "<group>"; };
+		EF190D3340DE133FFC0E526D /* Pods_DVT_Airport_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVT_Airport_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06158442229EB01B00E7F718 /* MapKit.framework in Frameworks */,
+				D2D5454EBC978571456ADB1C /* Pods_DVT_Airport_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				06158441229EB01B00E7F718 /* MapKit.framework */,
+				EF190D3340DE133FFC0E526D /* Pods_DVT_Airport_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,6 +73,7 @@
 				06E33812229C04F00048FD09 /* DVT Airport App */,
 				06E33811229C04F00048FD09 /* Products */,
 				06158440229EB01B00E7F718 /* Frameworks */,
+				AFA825083FED4C1EA497EDD2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,16 @@
 			path = "DVT Airport App";
 			sourceTree = "<group>";
 		};
+		AFA825083FED4C1EA497EDD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4514CDFE32F230431F71A6E3 /* Pods-DVT Airport App.debug.xcconfig */,
+				26675DC07F41A9CB1EAC47A1 /* Pods-DVT Airport App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06E33822229C04F10048FD09 /* Build configuration list for PBXNativeTarget "DVT Airport App" */;
 			buildPhases = (
+				C5C93B02F127946E3331730C /* [CP] Check Pods Manifest.lock */,
 				06E3380C229C04F00048FD09 /* Sources */,
 				06E3380D229C04F00048FD09 /* Frameworks */,
 				06E3380E229C04F00048FD09 /* Resources */,
+				0FC096DBD2E29581AECFD572 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +179,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FC096DBD2E29581AECFD572 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DVT Airport App/Pods-DVT Airport App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DVT Airport App/Pods-DVT Airport App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DVT Airport App/Pods-DVT Airport App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C93B02F127946E3331730C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVT Airport App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06E3380C229C04F00048FD09 /* Sources */ = {
@@ -313,6 +374,7 @@
 		};
 		06E33823229C04F10048FD09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4514CDFE32F230431F71A6E3 /* Pods-DVT Airport App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +393,7 @@
 		};
 		06E33824229C04F10048FD09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26675DC07F41A9CB1EAC47A1 /* Pods-DVT Airport App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
