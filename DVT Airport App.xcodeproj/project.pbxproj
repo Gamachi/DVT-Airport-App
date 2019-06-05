@@ -3,11 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06127C9322A7B9AC00C0F98F /* AirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127C9222A7B9AC00C0F98F /* AirportService.swift */; };
+		06127C9522A7C1A800C0F98F /* AirportRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127C9422A7C1A800C0F98F /* AirportRepository.swift */; };
+		06127C9722A7C22700C0F98F /* AirportRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127C9622A7C22700C0F98F /* AirportRepositoryImplementation.swift */; };
+		06127C9A22A7C88100C0F98F /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06127C9922A7C88100C0F98F /* RxSchedulers.swift */; };
 		06158442229EB01B00E7F718 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06158441229EB01B00E7F718 /* MapKit.framework */; };
+		06246A9222A68CB2005C7A13 /* ErrorInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06246A9122A68CB2005C7A13 /* ErrorInformation.swift */; };
+		06246A9622A697FA005C7A13 /* NearbyAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06246A9522A697FA005C7A13 /* NearbyAirport.swift */; };
+		066126DB22A122D9006BB18D /* AirportServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126DA22A122D9006BB18D /* AirportServiceImplementation.swift */; };
+		066126E122A1358F006BB18D /* AirportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E022A1358F006BB18D /* AirportSchedule.swift */; };
+		066126E322A13791006BB18D /* DepartureInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E222A13791006BB18D /* DepartureInformation.swift */; };
+		066126E522A137D3006BB18D /* ArrivalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E422A137D3006BB18D /* ArrivalInformation.swift */; };
+		066126E722A137F2006BB18D /* AirlineInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E622A137F2006BB18D /* AirlineInformation.swift */; };
+		066126E922A13812006BB18D /* FlightInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E822A13812006BB18D /* FlightInformation.swift */; };
 		06C58B2E229FDFFD009A7461 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C58B2D229FDFFD009A7461 /* MainViewModel.swift */; };
 		06C58B30229FE11D009A7461 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C58B2F229FE11D009A7461 /* MainView.swift */; };
 		06E33814229C04F00048FD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E33813229C04F00048FD09 /* AppDelegate.swift */; };
@@ -19,7 +31,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06127C9222A7B9AC00C0F98F /* AirportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportService.swift; sourceTree = "<group>"; };
+		06127C9422A7C1A800C0F98F /* AirportRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportRepository.swift; sourceTree = "<group>"; };
+		06127C9622A7C22700C0F98F /* AirportRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportRepositoryImplementation.swift; sourceTree = "<group>"; };
+		06127C9922A7C88100C0F98F /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
 		06158441229EB01B00E7F718 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		06246A9122A68CB2005C7A13 /* ErrorInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInformation.swift; sourceTree = "<group>"; };
+		06246A9522A697FA005C7A13 /* NearbyAirport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyAirport.swift; sourceTree = "<group>"; };
+		066126DA22A122D9006BB18D /* AirportServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportServiceImplementation.swift; sourceTree = "<group>"; };
+		066126E022A1358F006BB18D /* AirportSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSchedule.swift; sourceTree = "<group>"; };
+		066126E222A13791006BB18D /* DepartureInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureInformation.swift; sourceTree = "<group>"; };
+		066126E422A137D3006BB18D /* ArrivalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalInformation.swift; sourceTree = "<group>"; };
+		066126E622A137F2006BB18D /* AirlineInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineInformation.swift; sourceTree = "<group>"; };
+		066126E822A13812006BB18D /* FlightInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInformation.swift; sourceTree = "<group>"; };
 		06C58B2D229FDFFD009A7461 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		06C58B2F229FE11D009A7461 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		06E33810229C04F00048FD09 /* DVT Airport App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVT Airport App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06127C9822A7C86B00C0F98F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				06127C9922A7C88100C0F98F /* RxSchedulers.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		06158440229EB01B00E7F718 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +86,65 @@
 				EF190D3340DE133FFC0E526D /* Pods_DVT_Airport_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		066126D522A1221D006BB18D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				06C58B2C229FD593009A7461 /* Main */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		066126D622A12262006BB18D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				06127C9822A7C86B00C0F98F /* Util */,
+				066126D922A1229C006BB18D /* Repositories */,
+				066126D822A1227E006BB18D /* Models */,
+				066126D722A1226A006BB18D /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		066126D722A1226A006BB18D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				066126DA22A122D9006BB18D /* AirportServiceImplementation.swift */,
+				06127C9222A7B9AC00C0F98F /* AirportService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		066126D822A1227E006BB18D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				066126E222A13791006BB18D /* DepartureInformation.swift */,
+				066126E422A137D3006BB18D /* ArrivalInformation.swift */,
+				066126E622A137F2006BB18D /* AirlineInformation.swift */,
+				066126E822A13812006BB18D /* FlightInformation.swift */,
+				066126DD22A132E1006BB18D /* Responses */,
+				06246A9122A68CB2005C7A13 /* ErrorInformation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		066126D922A1229C006BB18D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				06127C9422A7C1A800C0F98F /* AirportRepository.swift */,
+				06127C9622A7C22700C0F98F /* AirportRepositoryImplementation.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		066126DD22A132E1006BB18D /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				06246A9522A697FA005C7A13 /* NearbyAirport.swift */,
+				066126E022A1358F006BB18D /* AirportSchedule.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		06C58B2C229FD593009A7461 /* Main */ = {
@@ -88,7 +179,8 @@
 		06E33812229C04F00048FD09 /* DVT Airport App */ = {
 			isa = PBXGroup;
 			children = (
-				06C58B2C229FD593009A7461 /* Main */,
+				066126D622A12262006BB18D /* Data */,
+				066126D522A1221D006BB18D /* UI */,
 				06E33813229C04F00048FD09 /* AppDelegate.swift */,
 				06E3381A229C04F10048FD09 /* Assets.xcassets */,
 				06E3381C229C04F10048FD09 /* LaunchScreen.storyboard */,
@@ -103,7 +195,6 @@
 				4514CDFE32F230431F71A6E3 /* Pods-DVT Airport App.debug.xcconfig */,
 				26675DC07F41A9CB1EAC47A1 /* Pods-DVT Airport App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,10 +318,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066126E122A1358F006BB18D /* AirportSchedule.swift in Sources */,
+				066126E722A137F2006BB18D /* AirlineInformation.swift in Sources */,
+				06246A9622A697FA005C7A13 /* NearbyAirport.swift in Sources */,
+				06127C9522A7C1A800C0F98F /* AirportRepository.swift in Sources */,
 				06E33816229C04F00048FD09 /* MainViewController.swift in Sources */,
+				06127C9722A7C22700C0F98F /* AirportRepositoryImplementation.swift in Sources */,
 				06C58B30229FE11D009A7461 /* MainView.swift in Sources */,
+				06246A9222A68CB2005C7A13 /* ErrorInformation.swift in Sources */,
+				066126DB22A122D9006BB18D /* AirportServiceImplementation.swift in Sources */,
+				06127C9A22A7C88100C0F98F /* RxSchedulers.swift in Sources */,
+				066126E522A137D3006BB18D /* ArrivalInformation.swift in Sources */,
 				06E33814229C04F00048FD09 /* AppDelegate.swift in Sources */,
 				06C58B2E229FDFFD009A7461 /* MainViewModel.swift in Sources */,
+				066126E322A13791006BB18D /* DepartureInformation.swift in Sources */,
+				066126E922A13812006BB18D /* FlightInformation.swift in Sources */,
+				06127C9322A7B9AC00C0F98F /* AirportService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

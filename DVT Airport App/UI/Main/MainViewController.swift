@@ -68,7 +68,7 @@ extension MainViewController {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            // Show alert to notify user that location services are required
+            promptUserToEnableLocationServices()
         }
     }
     
@@ -89,7 +89,7 @@ extension MainViewController {
         case .denied, .restricted:
             fallthrough
         default:
-            // Show alert to notify user that location services are required
+            promptUserToEnableLocationServices()
             break
         }
     }
@@ -99,5 +99,9 @@ extension MainViewController {
             let region = MKCoordinateRegion.init(center: userLocation, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
+    }
+    
+    private func promptUserToEnableLocationServices() {
+        // Show alert to notify user that location services are required
     }
 }
