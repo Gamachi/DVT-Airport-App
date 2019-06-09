@@ -14,4 +14,6 @@ protocol MainView {
     
     func failedToLocateNearbyAirports()
     
+    func navigateToAirportSchedule(_ airport: NearbyAirport)
+    
 }

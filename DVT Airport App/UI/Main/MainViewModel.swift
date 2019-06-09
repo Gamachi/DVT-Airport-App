@@ -32,8 +32,18 @@ class MainViewModel {
                 self.nearbyAirportsRetrieved(nearbyAirports)
             }, onError: { error in
                 self.errorOccurred(error)
+                self.locateAirportsTapped(lat: lat, lng: lng)
             }, onCompleted: nil, onDisposed: nil)
             .disposed(by: disposables)
+    }
+    
+    func airportTapped(_ airportTitle: String) {
+        let airport = nearbyAirports?.first(where: { $0.nameAirport == airportTitle })
+        guard let tappedAirport = airport else {
+            return
+        }
+        
+        view.navigateToAirportSchedule(tappedAirport)
     }
     
 }

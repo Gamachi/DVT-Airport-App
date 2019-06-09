@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="DVT_Airport_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdt-bj-QsA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sXz-ng-4q4"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vdt-bj-QsA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Ts-5j-nDg"/>
+                            <constraint firstItem="Vdt-bj-QsA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9qW-7m-pN4"/>
+                            <constraint firstAttribute="bottom" secondItem="Vdt-bj-QsA" secondAttribute="bottom" id="eQu-9L-0Ga"/>
+                            <constraint firstAttribute="trailing" secondItem="Vdt-bj-QsA" secondAttribute="trailing" id="fPU-5U-nbN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Vdt-bj-QsA" id="9u7-SU-fRQ"/>
+                        <segue destination="jft-WB-dGv" kind="show" identifier="ShowFlightSchedule" id="AB9-Kr-wzn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Flight Schedule View Controller-->
+        <scene sceneID="IhR-CI-47t">
+            <objects>
+                <viewController storyboardIdentifier="FlightScheduleViewController" id="jft-WB-dGv" customClass="FlightScheduleViewController" customModule="DVT_Airport_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxA-xG-kes">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tma-S3-yhr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightScheduleCell" id="2zO-pr-ciD">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2zO-pr-ciD" id="aoG-n9-Bky">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-YU-779">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Flight Schedules" id="FmX-5q-WIY">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="2xB-NR-BwD">
+                                            <connections>
+                                                <segue destination="btS-RQ-nGQ" kind="unwind" identifier="FlightScheduleUnwind" unwindAction="unwindToMain:" id="Pt5-cf-ubn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VyT-TZ-ccW" firstAttribute="trailing" secondItem="AY7-YU-779" secondAttribute="trailing" id="56i-2i-Lnr"/>
+                            <constraint firstItem="AY7-YU-779" firstAttribute="top" secondItem="VyT-TZ-ccW" secondAttribute="top" id="Cs1-IO-2jX"/>
+                            <constraint firstItem="tma-S3-yhr" firstAttribute="leading" secondItem="VyT-TZ-ccW" secondAttribute="leading" id="Tc1-2l-UgC"/>
+                            <constraint firstItem="tma-S3-yhr" firstAttribute="bottom" secondItem="VyT-TZ-ccW" secondAttribute="bottom" id="U3p-cA-Ptc"/>
+                            <constraint firstItem="tma-S3-yhr" firstAttribute="trailing" secondItem="VyT-TZ-ccW" secondAttribute="trailing" id="XO5-kc-eX3"/>
+                            <constraint firstItem="tma-S3-yhr" firstAttribute="top" secondItem="AY7-YU-779" secondAttribute="bottom" id="pJ5-D5-JkL"/>
+                            <constraint firstItem="AY7-YU-779" firstAttribute="leading" secondItem="VyT-TZ-ccW" secondAttribute="leading" id="wsa-Q0-WHX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VyT-TZ-ccW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I77-Bn-9HR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="btS-RQ-nGQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1432.8" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
