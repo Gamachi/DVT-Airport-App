@@ -14,6 +14,8 @@ protocol AirportService {
     
     static var shared: AirportService { get }
     
+    func getAirports(nearbyLat: String, long: String) -> Observable<Result<[NearbyAirport], ErrorInformation>>
+    
     func getAirports(nearbyLat: String, long: String, distance: String) -> Observable<Result<[NearbyAirport], ErrorInformation>>
     
     func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<Result<[AirportSchedule], ErrorInformation>>

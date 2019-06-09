@@ -36,13 +36,13 @@ class AirportServiceImplementation {
     }
     
     private enum BaseUrl : String {
-        case Default = "http://aviation-edge.com"
+        case Default = "http://aviation-edge.com/v2/public"
         case Mock = "https://a76dec81-f9d5-4933-851a-9a817a82b1e0.mock.pstmn.io"
     }
     
     private enum CallPath : String {
-        case GetAirports = "/v2/public/nearby"
-        case GetSchedule = "/v2/public/timetable"
+        case GetAirports = "/nearby"
+        case GetSchedule = "/timetable"
     }
     
 }
@@ -53,7 +53,11 @@ extension AirportServiceImplementation : AirportService {
     
     static var shared: AirportService = AirportServiceImplementation()
     
-    func getAirports(nearbyLat: String, long: String, distance: String = QueryValue.Distance.rawValue) -> Observable<Result<[NearbyAirport], ErrorInformation>> {
+    func getAirports(nearbyLat: String, long: String) -> Observable<Result<[NearbyAirport], ErrorInformation>> {
+        return getAirports(nearbyLat: nearbyLat, long: long, distance: QueryValue.Distance.rawValue)
+    }
+    
+    func getAirports(nearbyLat: String, long: String, distance: String) -> Observable<Result<[NearbyAirport], ErrorInformation>> {
         let getAirportsQueryDictionary = [
             QueryKey.ApiKey.rawValue : QueryValue.ApiKey.rawValue,
             QueryKey.Lat.rawValue : nearbyLat,

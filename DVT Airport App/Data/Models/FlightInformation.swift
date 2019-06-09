@@ -10,9 +10,9 @@ import Foundation
 
 struct FlightInformation : Codable {
     // Number of flight
-    var number: String
+    var number: String?
     // IATA prefix with Flight number
-    var iataNumber: String
+    var iataNumber: String?
     // ICAO prefix with Flight number
-    var icaoNumber: String
+    var icaoNumber: String?
 }

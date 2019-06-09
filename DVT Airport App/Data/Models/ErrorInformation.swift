@@ -9,7 +9,7 @@
 import Foundation
 import RxRetroSwift
 
-struct ErrorInformation : DecodableError {
+struct ErrorInformation : DecodableError, Error {
     var errorCode: Int?
     var errorDetail: String?
 }

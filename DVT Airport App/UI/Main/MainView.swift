@@ -10,6 +10,8 @@ import Foundation
 
 protocol MainView {
     
+    func locatedAirport(_ airport: NearbyAirport)
     
+    func failedToLocateNearbyAirports()
     
 }

@@ -17,7 +17,11 @@ class MainViewController: UIViewController {
     
     private var viewModel: MainViewModel!
     
-    private let regionInMeters: Double = 20000
+    private var locationUsedToLocateAirports: CLLocation?
+    private var latestUserLocation: CLLocation?
+    
+    private let regionInMeters: Double = 20000 // 20km
+    private let distanceBetweenLocatingAirportsInMeters: Double = 50000 // 50km
     private let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -26,11 +30,6 @@ class MainViewController: UIViewController {
         
         checkLocationServices()
     }
-
-    @IBAction
-    func locateAirportsTapped(_ sender: Any) {
-        viewModel.locateAirportsTapped()
-    }
     
 }
 
@@ -38,7 +37,15 @@ class MainViewController: UIViewController {
 
 extension MainViewController: MainView {
     
+    func locatedAirport(_ airport: NearbyAirport) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        // TODO: Display found airport on map; on tap should nav to second screen
+    }
     
+    func failedToLocateNearbyAirports() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        // TODO: Prompt user to retry
+    }
     
 }
 
@@ -47,10 +54,20 @@ extension MainViewController: MainView {
 extension MainViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let userLocation = location.coordinate
-        let region = MKCoordinateRegion.init(center: userLocation, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        mapView.setRegion(region, animated: true)
+        guard let userLocation = locations.last else {
+            return
+        }
+        
+        latestUserLocation = userLocation
+        centerViewOnUserLocation(userLocation.coordinate)
+        
+        if let lastFoundAirportsAt = locationUsedToLocateAirports {
+            if (userLocation.distance(from: lastFoundAirportsAt) < distanceBetweenLocatingAirportsInMeters) {
+                return
+            }
+        }
+        
+        locateAirports(userLocation)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -80,7 +97,6 @@ extension MainViewController {
     private func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
-            centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
             break
         case .notDetermined:
@@ -94,14 +110,17 @@ extension MainViewController {
         }
     }
     
-    private func centerViewOnUserLocation() {
-        if let userLocation = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: userLocation, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            mapView.setRegion(region, animated: true)
-        }
+    private func centerViewOnUserLocation(_ location: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        mapView.setRegion(region, animated: true)
     }
     
     private func promptUserToEnableLocationServices() {
-        // Show alert to notify user that location services are required
+        // TODO: Prompt user that location services are required
+    }
+    
+    private func locateAirports(_ location: CLLocation) {
+        locationUsedToLocateAirports = location
+        viewModel.locateAirportsTapped(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
     }
 }

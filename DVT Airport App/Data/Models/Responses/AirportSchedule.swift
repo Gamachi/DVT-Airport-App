@@ -10,15 +10,17 @@ import Foundation
 
 struct AirportSchedule : Codable {
     // Type of entry (arrival / departure)
-    var type: String
+    var type: String?
     // Status of flight (landed, scheduled, cancelled, active, incident, diverted, redirected, unknown)
-    var status: String
+    var status: String?
     // Information about departure
-    var departure: DepartureInformation
+    var departure: DepartureInformation?
     // Information about arrival
-    var arrival: ArrivalInformation
+    var arrival: ArrivalInformation?
     // Information about airline
-    var airline: AirlineInformation
+    var airline: AirlineInformation?
     // Information about flight
-    var flight: FlightInformation
+    var flight: FlightInformation?
+    // Not documented, unsure
+    var codeshared: CodeShared?
 }

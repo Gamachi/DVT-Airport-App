@@ -27,18 +27,18 @@ extension AirportRepositoryImplementation : AirportRepository {
     
     static var shared: AirportRepository = AirportRepositoryImplementation()
     
-    func getAirports(nearbyLat: Double, long: Double, distance: Int) -> Observable<[NearbyAirport]> {
+    func getAirports(nearbyLat: Double, long: Double) -> Observable<[NearbyAirport]> {
         let latitude = String(format: coordinateFormat, nearbyLat)
         let longitude = String(format: coordinateFormat, long)
         
-        return airportService.getAirports(nearbyLat: latitude, long: longitude, distance: distance.description)
+        return airportService.getAirports(nearbyLat: latitude, long: longitude)
             .subscribeOn(RxSchedulers.rxBackground)
             .flatMap { result -> Observable<[NearbyAirport]> in
-                guard result.error == nil && result.value != nil else {
-                    return .just([])
+                if let error = result.error {
+                    return .error(error)
                 }
                 
-                return .just(result.value!)
+                return .just(result.value ?? [])
             }
     }
     
@@ -46,11 +46,11 @@ extension AirportRepositoryImplementation : AirportRepository {
         return airportService.getDepartureSchedule(forAirportWithIATACode: forAirportWithIATACode)
             .subscribeOn(RxSchedulers.rxBackground)
             .flatMap { result -> Observable<[AirportSchedule]> in
-                guard result.error == nil && result.value != nil else {
-                    return .just([])
+                if let error = result.error {
+                    return .error(error)
                 }
                 
-                return .just(result.value!)
+                return .just(result.value ?? [])
             }
     }
     

@@ -13,7 +13,7 @@ protocol AirportRepository {
     
     static var shared: AirportRepository { get }
     
-    func getAirports(nearbyLat: Double, long: Double, distance: Int) -> Observable<[NearbyAirport]>
+    func getAirports(nearbyLat: Double, long: Double) -> Observable<[NearbyAirport]>
     
     func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<[AirportSchedule]>
     

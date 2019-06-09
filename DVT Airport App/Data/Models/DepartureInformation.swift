@@ -10,23 +10,21 @@ import Foundation
 
 struct DepartureInformation : Codable {
     // IATA code of departure Airport
-    var iataCode: String
+    var iataCode: String?
     // ICAO code of departure Airport
-    var icaoCode: String
+    var icaoCode: String?
     // Terminal of departure Airport
-    var terminal: String
+    var terminal: String?
     // Gate of departure Airport
-    var gate: String
-    // Delay of Flight in minutes
-    var delay: String
+    var gate: String?
     // Scheduled time of departure
-    var scheduledTime: String
+    var scheduledTime: String?
     // Estimated time of departure
-    var estimatedTime: String
+    var estimatedTime: String?
     // Actual time of departure
-    var actualTime: String
+    var actualTime: String?
     // Estimated time departure on runway
-    var estimatedRunway: String
+    var estimatedRunway: String?
     // Actual time departure on runway
-    var actualRunway: String
+    var actualRunway: String?
 }

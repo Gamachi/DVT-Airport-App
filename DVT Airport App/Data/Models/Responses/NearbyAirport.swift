@@ -10,31 +10,29 @@ import Foundation
 
 struct NearbyAirport : Codable {
     // IATA code of Airport
-    var code: String
+    var codeIataAirport: String?
     // ICAO code of Airport
-    var icao: String
+    var codeIcaoAirport: String?
     // Name of Airport
-    var name: String
+    var nameAirport: String?
+    // Phone number
+    var phone: String?
+    // GMT timezone
+    var GMT: String?
+    // Name translations
+    var nameTranslations: String?
     // IATA code of City
-    var cityCode: String
-    // Name of City
-    var cityName: String
+    var codeIataCity: String?
     // 2 Digit ISO code of Country
-    var countryCode: String
+    var codeIso2Country: String?
     // Name of Country of Airport
-    var countryName: String
+    var nameCountry: String?
     // Latitude coordinates of Airport
-    var lat: Double
+    var latitudeAirport: String?
     // Longitude coordinates of Airport
-    var lng: Double
+    var longitudeAirport: String?
     // Timezone name
-    var timezone: String
-    // Type of autocomplete
-    var type: String
-    // Flag indicating whether this is a railroad station
-    var isRailroad: Int
-    // Flag indicating whether this is a bus station
-    var isBusStation: Int
+    var timezone: String?
     // Distance from location
-    var distance: Int
+    var distance: String?
 }

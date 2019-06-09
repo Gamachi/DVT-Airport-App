@@ -10,23 +10,15 @@ import Foundation
 
 struct ArrivalInformation : Codable {
     // IATA code of arrival Airport
-    var iataCode: String
+    var iataCode: String?
     // ICAO code of arrival Airport
-    var icaoCode: String
-    // Terminal of arrival Airport
-    var terminal: String
-    // Gate of arrival Airport
-    var gate: String
-    // Delay of Flight in minutes
-    var delay: String
+    var icaoCode: String?
+    // Number of baggage
+    var baggage: String?
     // Scheduled time of arrival
-    var scheduledTime: String
+    var scheduledTime: String?
     // Estimated time of arrival
-    var estimatedTime: String
+    var estimatedTime: String?
     // Actual time of arrival
-    var actualTime: String
-    // Estimated time arrival on runway
-    var estimatedRunway: String
-    // Actual time arrival on runway
-    var actualRunway: String
+    var actualTime: String?
 }

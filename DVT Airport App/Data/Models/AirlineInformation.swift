@@ -10,9 +10,9 @@ import Foundation
 
 struct AirlineInformation : Codable {
     // Name of Airline
-    var name: String
+    var name: String?
     // IATA Code of Airline
-    var iataCode: String
+    var iataCode: String?
     // ICAO Code of Airline
-    var icaoCode: String
+    var icaoCode: String?
 }
