@@ -15,7 +15,7 @@
 		06246A9222A68CB2005C7A13 /* ErrorInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06246A9122A68CB2005C7A13 /* ErrorInformation.swift */; };
 		06246A9622A697FA005C7A13 /* NearbyAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06246A9522A697FA005C7A13 /* NearbyAirport.swift */; };
 		066126DB22A122D9006BB18D /* AirportServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126DA22A122D9006BB18D /* AirportServiceImplementation.swift */; };
-		066126E122A1358F006BB18D /* AirportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E022A1358F006BB18D /* AirportSchedule.swift */; };
+		066126E122A1358F006BB18D /* FlightSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E022A1358F006BB18D /* FlightSchedule.swift */; };
 		066126E322A13791006BB18D /* DepartureInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E222A13791006BB18D /* DepartureInformation.swift */; };
 		066126E522A137D3006BB18D /* ArrivalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E422A137D3006BB18D /* ArrivalInformation.swift */; };
 		066126E722A137F2006BB18D /* AirlineInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066126E622A137F2006BB18D /* AirlineInformation.swift */; };
@@ -24,6 +24,8 @@
 		06C19D6F22AD3CA000775B85 /* FlightScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C19D6E22AD3CA000775B85 /* FlightScheduleViewController.swift */; };
 		06C58B2E229FDFFD009A7461 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C58B2D229FDFFD009A7461 /* MainViewModel.swift */; };
 		06C58B30229FE11D009A7461 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C58B2F229FE11D009A7461 /* MainView.swift */; };
+		06CF850822AE72FD00ED7787 /* FlightScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF850722AE72FD00ED7787 /* FlightScheduleViewModel.swift */; };
+		06CF850A22AE730E00ED7787 /* FlightScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF850922AE730E00ED7787 /* FlightScheduleView.swift */; };
 		06E33814229C04F00048FD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E33813229C04F00048FD09 /* AppDelegate.swift */; };
 		06E33816229C04F00048FD09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E33815229C04F00048FD09 /* MainViewController.swift */; };
 		06E33819229C04F00048FD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E33817229C04F00048FD09 /* Main.storyboard */; };
@@ -41,7 +43,7 @@
 		06246A9122A68CB2005C7A13 /* ErrorInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInformation.swift; sourceTree = "<group>"; };
 		06246A9522A697FA005C7A13 /* NearbyAirport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyAirport.swift; sourceTree = "<group>"; };
 		066126DA22A122D9006BB18D /* AirportServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportServiceImplementation.swift; sourceTree = "<group>"; };
-		066126E022A1358F006BB18D /* AirportSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSchedule.swift; sourceTree = "<group>"; };
+		066126E022A1358F006BB18D /* FlightSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSchedule.swift; sourceTree = "<group>"; };
 		066126E222A13791006BB18D /* DepartureInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureInformation.swift; sourceTree = "<group>"; };
 		066126E422A137D3006BB18D /* ArrivalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalInformation.swift; sourceTree = "<group>"; };
 		066126E622A137F2006BB18D /* AirlineInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineInformation.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		06C19D6E22AD3CA000775B85 /* FlightScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScheduleViewController.swift; sourceTree = "<group>"; };
 		06C58B2D229FDFFD009A7461 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		06C58B2F229FE11D009A7461 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		06CF850722AE72FD00ED7787 /* FlightScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScheduleViewModel.swift; sourceTree = "<group>"; };
+		06CF850922AE730E00ED7787 /* FlightScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScheduleView.swift; sourceTree = "<group>"; };
 		06E33810229C04F00048FD09 /* DVT Airport App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVT Airport App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E33813229C04F00048FD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06E33815229C04F00048FD09 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				06246A9522A697FA005C7A13 /* NearbyAirport.swift */,
-				066126E022A1358F006BB18D /* AirportSchedule.swift */,
+				066126E022A1358F006BB18D /* FlightSchedule.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -158,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				06C19D6E22AD3CA000775B85 /* FlightScheduleViewController.swift */,
+				06CF850722AE72FD00ED7787 /* FlightScheduleViewModel.swift */,
+				06CF850922AE730E00ED7787 /* FlightScheduleView.swift */,
 			);
 			path = FlightSchedule;
 			sourceTree = "<group>";
@@ -332,7 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				066126E122A1358F006BB18D /* AirportSchedule.swift in Sources */,
+				066126E122A1358F006BB18D /* FlightSchedule.swift in Sources */,
 				066126E722A137F2006BB18D /* AirlineInformation.swift in Sources */,
 				06246A9622A697FA005C7A13 /* NearbyAirport.swift in Sources */,
 				06127C9522A7C1A800C0F98F /* AirportRepository.swift in Sources */,
@@ -342,8 +348,10 @@
 				06C58B30229FE11D009A7461 /* MainView.swift in Sources */,
 				06246A9222A68CB2005C7A13 /* ErrorInformation.swift in Sources */,
 				066126DB22A122D9006BB18D /* AirportServiceImplementation.swift in Sources */,
+				06CF850822AE72FD00ED7787 /* FlightScheduleViewModel.swift in Sources */,
 				06127C9A22A7C88100C0F98F /* RxSchedulers.swift in Sources */,
 				066126E522A137D3006BB18D /* ArrivalInformation.swift in Sources */,
+				06CF850A22AE730E00ED7787 /* FlightScheduleView.swift in Sources */,
 				06E33814229C04F00048FD09 /* AppDelegate.swift in Sources */,
 				06C58B2E229FDFFD009A7461 /* MainViewModel.swift in Sources */,
 				066126E322A13791006BB18D /* DepartureInformation.swift in Sources */,

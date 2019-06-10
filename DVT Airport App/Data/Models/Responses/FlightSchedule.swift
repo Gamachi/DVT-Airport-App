@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AirportSchedule : Codable {
+struct FlightSchedule : Codable {
     // Type of entry (arrival / departure)
     var type: String?
     // Status of flight (landed, scheduled, cancelled, active, incident, diverted, redirected, unknown)

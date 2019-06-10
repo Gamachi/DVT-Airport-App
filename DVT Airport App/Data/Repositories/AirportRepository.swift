@@ -15,6 +15,6 @@ protocol AirportRepository {
     
     func getAirports(nearbyLat: Double, long: Double) -> Observable<[NearbyAirport]>
     
-    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<[AirportSchedule]>
+    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<[FlightSchedule]>
     
 }

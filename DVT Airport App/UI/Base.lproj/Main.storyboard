@@ -50,24 +50,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tma-S3-yhr">
+                            <tableView clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="122" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tma-S3-yhr">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightScheduleCell" id="2zO-pr-ciD">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlightScheduleCell" rowHeight="122" id="2zO-pr-ciD" customClass="FlightScheduleCell" customModule="DVT_Airport_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2zO-pr-ciD" id="aoG-n9-Bky">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHP-Wi-vhR" userLabel="departureTime">
+                                                    <rect key="frame" x="15" y="11" width="36" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="evg-Dy-HO8" userLabel="statusIndicator">
+                                                    <rect key="frame" x="275" y="17" width="8" height="8"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcp-cV-iqg" userLabel="flightType">
+                                                    <rect key="frame" x="291" y="11" width="69" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96Y-5D-MeL" userLabel="cellContentDivider">
+                                                    <rect key="frame" x="15" y="40" width="345" height="3"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="unS-W6-ByA"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="pe8-kc-P0T">
+                                                    <rect key="frame" x="15" y="51" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="Yjs-23-Qhv"/>
+                                                        <constraint firstAttribute="width" constant="60" id="zbz-XX-Dn7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOUTH AFRICAN AIRWAYS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-5X-heQ" userLabel="airlineName">
+                                                    <rect key="frame" x="80" y="51" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cape Town" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQa-Qi-cYN" userLabel="destination">
+                                                    <rect key="frame" x="80" y="75" width="280" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SA303" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-5Q-o8u" userLabel="flightIataNr">
+                                                    <rect key="frame" x="80" y="94" width="280" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CjV-5Q-o8u" secondAttribute="trailing" id="01U-o6-7v0"/>
+                                                <constraint firstItem="eRu-5X-heQ" firstAttribute="top" secondItem="pe8-kc-P0T" secondAttribute="top" id="255-kg-jNb"/>
+                                                <constraint firstItem="96Y-5D-MeL" firstAttribute="trailing" secondItem="aoG-n9-Bky" secondAttribute="trailingMargin" id="3Ya-Ic-3ya"/>
+                                                <constraint firstItem="dHP-Wi-vhR" firstAttribute="leading" secondItem="aoG-n9-Bky" secondAttribute="leadingMargin" id="3nC-eO-oNg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EQa-Qi-cYN" secondAttribute="trailing" id="4kp-l8-ogd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eRu-5X-heQ" secondAttribute="trailing" id="6c5-dT-txw"/>
+                                                <constraint firstItem="Vcp-cV-iqg" firstAttribute="top" secondItem="aoG-n9-Bky" secondAttribute="topMargin" id="7Tz-dr-gpd"/>
+                                                <constraint firstItem="96Y-5D-MeL" firstAttribute="leading" secondItem="aoG-n9-Bky" secondAttribute="leadingMargin" id="8Cr-7F-Rgw"/>
+                                                <constraint firstItem="Vcp-cV-iqg" firstAttribute="leading" secondItem="evg-Dy-HO8" secondAttribute="trailing" constant="8" id="8Jz-Xj-Hk9"/>
+                                                <constraint firstItem="EQa-Qi-cYN" firstAttribute="leading" secondItem="pe8-kc-P0T" secondAttribute="trailing" constant="5" id="8Sn-rn-FO9"/>
+                                                <constraint firstItem="dHP-Wi-vhR" firstAttribute="top" secondItem="aoG-n9-Bky" secondAttribute="topMargin" id="A5h-gQ-5iq"/>
+                                                <constraint firstItem="pe8-kc-P0T" firstAttribute="top" secondItem="96Y-5D-MeL" secondAttribute="bottom" constant="8" id="AfJ-xM-dM0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vcp-cV-iqg" secondAttribute="trailing" id="EGA-6w-sbc"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dHP-Wi-vhR" secondAttribute="trailing" constant="20" symbolic="YES" id="H30-kI-Oqd"/>
+                                                <constraint firstItem="CjV-5Q-o8u" firstAttribute="bottom" secondItem="pe8-kc-P0T" secondAttribute="bottom" id="HG4-39-rIS"/>
+                                                <constraint firstItem="evg-Dy-HO8" firstAttribute="firstBaseline" secondItem="Vcp-cV-iqg" secondAttribute="firstBaseline" constant="-10" id="MRY-h2-pba"/>
+                                                <constraint firstItem="pe8-kc-P0T" firstAttribute="leading" secondItem="aoG-n9-Bky" secondAttribute="leadingMargin" id="PvP-5q-Ep6"/>
+                                                <constraint firstItem="96Y-5D-MeL" firstAttribute="top" secondItem="dHP-Wi-vhR" secondAttribute="bottom" constant="8" id="TEz-cU-4we"/>
+                                                <constraint firstItem="Vcp-cV-iqg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dHP-Wi-vhR" secondAttribute="trailing" constant="8" symbolic="YES" id="c2A-MB-FnY"/>
+                                                <constraint firstItem="CjV-5Q-o8u" firstAttribute="top" secondItem="EQa-Qi-cYN" secondAttribute="bottom" constant="2" id="iTe-ND-E2r"/>
+                                                <constraint firstItem="eRu-5X-heQ" firstAttribute="leading" secondItem="pe8-kc-P0T" secondAttribute="trailing" constant="5" id="rfR-Pg-FIP"/>
+                                                <constraint firstItem="CjV-5Q-o8u" firstAttribute="leading" secondItem="pe8-kc-P0T" secondAttribute="trailing" constant="5" id="xVX-Ba-hbN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="airlineName" destination="eRu-5X-heQ" id="kqh-L6-z7Y"/>
+                                            <outlet property="departureTime" destination="dHP-Wi-vhR" id="8VH-BZ-uiF"/>
+                                            <outlet property="destination" destination="EQa-Qi-cYN" id="yF6-Th-fOy"/>
+                                            <outlet property="flightIataNr" destination="CjV-5Q-o8u" id="9yf-jn-uHK"/>
+                                            <outlet property="flightType" destination="Vcp-cV-iqg" id="G5K-Xo-wM0"/>
+                                            <outlet property="statusIndicator" destination="evg-Dy-HO8" id="sFO-sy-azv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46B-HR-n4L" userLabel="Progress Overlay">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sSZ-yG-f4I">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrieving flights schedule..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht5-18-kFN">
+                                        <rect key="frame" x="53" y="224" width="269" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sSZ-yG-f4I" firstAttribute="top" secondItem="Ht5-18-kFN" secondAttribute="bottom" constant="32" id="V5v-fX-As9"/>
+                                    <constraint firstItem="sSZ-yG-f4I" firstAttribute="centerX" secondItem="46B-HR-n4L" secondAttribute="centerX" id="oUe-cf-QfW"/>
+                                    <constraint firstItem="Ht5-18-kFN" firstAttribute="centerX" secondItem="46B-HR-n4L" secondAttribute="centerX" id="qog-FS-piD"/>
+                                    <constraint firstItem="sSZ-yG-f4I" firstAttribute="centerY" secondItem="46B-HR-n4L" secondAttribute="centerY" id="sYM-lY-D7C"/>
+                                </constraints>
+                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-YU-779">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Flight Schedules" id="FmX-5q-WIY">
+                                    <navigationItem title="Flights" id="FmX-5q-WIY">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="2xB-NR-BwD">
                                             <connections>
                                                 <segue destination="btS-RQ-nGQ" kind="unwind" identifier="FlightScheduleUnwind" unwindAction="unwindToMain:" id="Pt5-cf-ubn"/>
@@ -79,16 +186,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="46B-HR-n4L" firstAttribute="leading" secondItem="VyT-TZ-ccW" secondAttribute="leading" id="20x-IE-NJW"/>
+                            <constraint firstItem="46B-HR-n4L" firstAttribute="top" secondItem="AY7-YU-779" secondAttribute="bottom" id="2SF-vu-i8p"/>
                             <constraint firstItem="VyT-TZ-ccW" firstAttribute="trailing" secondItem="AY7-YU-779" secondAttribute="trailing" id="56i-2i-Lnr"/>
                             <constraint firstItem="AY7-YU-779" firstAttribute="top" secondItem="VyT-TZ-ccW" secondAttribute="top" id="Cs1-IO-2jX"/>
                             <constraint firstItem="tma-S3-yhr" firstAttribute="leading" secondItem="VyT-TZ-ccW" secondAttribute="leading" id="Tc1-2l-UgC"/>
                             <constraint firstItem="tma-S3-yhr" firstAttribute="bottom" secondItem="VyT-TZ-ccW" secondAttribute="bottom" id="U3p-cA-Ptc"/>
                             <constraint firstItem="tma-S3-yhr" firstAttribute="trailing" secondItem="VyT-TZ-ccW" secondAttribute="trailing" id="XO5-kc-eX3"/>
+                            <constraint firstItem="VyT-TZ-ccW" firstAttribute="bottom" secondItem="46B-HR-n4L" secondAttribute="bottom" id="b1T-bw-Kmf"/>
                             <constraint firstItem="tma-S3-yhr" firstAttribute="top" secondItem="AY7-YU-779" secondAttribute="bottom" id="pJ5-D5-JkL"/>
+                            <constraint firstItem="46B-HR-n4L" firstAttribute="trailing" secondItem="VyT-TZ-ccW" secondAttribute="trailing" id="trw-lB-cgc"/>
                             <constraint firstItem="AY7-YU-779" firstAttribute="leading" secondItem="VyT-TZ-ccW" secondAttribute="leading" id="wsa-Q0-WHX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VyT-TZ-ccW"/>
                     </view>
+                    <connections>
+                        <outlet property="progressOverlay" destination="46B-HR-n4L" id="6Ke-tr-6W0"/>
+                        <outlet property="tableView" destination="tma-S3-yhr" id="S6L-HS-j2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I77-Bn-9HR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="btS-RQ-nGQ" userLabel="Exit" sceneMemberID="exit"/>
@@ -96,4 +211,8 @@
             <point key="canvasLocation" x="1432.8" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="green_dot" width="8" height="8"/>
+        <image name="plane" width="48" height="48"/>
+    </resources>
 </document>

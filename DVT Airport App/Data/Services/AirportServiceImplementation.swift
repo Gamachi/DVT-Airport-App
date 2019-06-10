@@ -16,7 +16,7 @@ class AirportServiceImplementation {
     
     private init() {
         // TODO: Change from mock to actual before submission
-        RequestModel.defaults.baseUrl = BaseUrl.Mock.rawValue
+        RequestModel.defaults.baseUrl = BaseUrl.Default.rawValue
     }
 
     
@@ -73,7 +73,7 @@ extension AirportServiceImplementation : AirportService {
         return requestCaller.call(request)
     }
     
-    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<Result<[AirportSchedule], ErrorInformation>> {
+    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<Result<[FlightSchedule], ErrorInformation>> {
         let getDepartureScheduleQueryDictionary = [
             QueryKey.ApiKey.rawValue : QueryValue.ApiKey.rawValue,
             QueryKey.IataCode.rawValue : forAirportWithIATACode,

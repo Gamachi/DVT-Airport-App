@@ -18,6 +18,6 @@ protocol AirportService {
     
     func getAirports(nearbyLat: String, long: String, distance: String) -> Observable<Result<[NearbyAirport], ErrorInformation>>
     
-    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<Result<[AirportSchedule], ErrorInformation>>
+    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<Result<[FlightSchedule], ErrorInformation>>
     
 }

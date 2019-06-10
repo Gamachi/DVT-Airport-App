@@ -42,10 +42,10 @@ extension AirportRepositoryImplementation : AirportRepository {
             }
     }
     
-    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<[AirportSchedule]> {
+    func getDepartureSchedule(forAirportWithIATACode: String) -> Observable<[FlightSchedule]> {
         return airportService.getDepartureSchedule(forAirportWithIATACode: forAirportWithIATACode)
             .subscribeOn(RxSchedulers.rxBackground)
-            .flatMap { result -> Observable<[AirportSchedule]> in
+            .flatMap { result -> Observable<[FlightSchedule]> in
                 if let error = result.error {
                     return .error(error)
                 }
